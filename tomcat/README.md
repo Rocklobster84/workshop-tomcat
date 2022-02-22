@@ -1,4 +1,4 @@
-# workshop_tomcat
+# tomcat
 
 TODO: Enter the cookbook description here.
 

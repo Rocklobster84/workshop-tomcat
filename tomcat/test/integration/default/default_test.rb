@@ -1,4 +1,4 @@
-# Chef InSpec test for recipe workshop_tomcat::default
+# Chef InSpec test for recipe tomcat::default
 
 # The Chef InSpec reference, with examples and extensive documentation, can be
 # found at https://docs.chef.io/inspec/resources/
