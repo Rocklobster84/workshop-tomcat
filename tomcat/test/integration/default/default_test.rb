@@ -7,3 +7,18 @@
 describe package('java-1.7.0-openjdk-devel') do 
   it { should be_installed}
 end
+
+# Test creation of tomcat group
+describe group('tomcat') do
+  it { should exist }
+end
+
+# Test setup of tomcat user
+describe user('tomcat') do
+  it { should exist }
+end
+
+# Test creation of required directories
+describe directory('/opt/tomcat') do
+  it { should exist }
+end
