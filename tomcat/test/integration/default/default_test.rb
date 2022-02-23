@@ -28,3 +28,8 @@ end
 describe directory('/opt/tomcat/conf') do
   its ('mode') { should eq 0750 }
 end
+
+# Test creation of config file from tomcat.service
+describe file('/etc/systemd/system/tomcat.service') do
+  it { should exist }
+end
