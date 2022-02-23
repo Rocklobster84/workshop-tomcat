@@ -18,7 +18,13 @@ describe user('tomcat') do
   it { should exist }
 end
 
-# Test creation of required directories
+# Test creation of required directories and ownership update
 describe directory('/opt/tomcat') do
   it { should exist }
+  its ('group') { should eq 'tomcat' }
+end
+
+# Test permission level of /opt/tomcat/conf
+describe directory('/opt/tomcat/conf') do
+  its ('mode') { should eq 0750 }
 end

@@ -32,6 +32,6 @@ end
 
 # Update permissions on conf directory to give Tomcat read and execute permissions
 directory '/opt/tomcat/conf' do
-  mode '750'
+  mode '0750'
   action :create
 end
