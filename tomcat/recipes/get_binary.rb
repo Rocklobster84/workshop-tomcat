@@ -22,3 +22,16 @@ archive_file "#{Chef::Config[:file_cache_path]}/tomcat.tar.gz" do
   action :extract
   not_if { Dir.exist?('/opt/tomcat') }
 end
+
+# Update owner to tomcat recursively
+directory '/opt/tomcat' do
+  group 'tomcat'
+  action :create
+  recursive true
+end
+
+# Update permissions on conf directory to give Tomcat read and execute permissions
+directory '/opt/tomcat/conf' do
+  mode '750'
+  action :create
+end
