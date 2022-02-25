@@ -34,7 +34,7 @@ describe file('/etc/systemd/system/tomcat.service') do
   it { should exist }
 end
 
-# Verify web server is running by visiting port 8080
+# Verify web server is running by visiting localhost on port 8080, 200 response means it is working
 describe http('http://localhost:8080') do
   its('status') { should cmp 200 }
 end
